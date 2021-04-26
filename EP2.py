@@ -1,4 +1,5 @@
 # Jogo de paciência acordeão
+print('Jogo de paci~encia acordeão')
 
 print('===========================================================')
 
@@ -11,4 +12,4 @@ def cria_baralho():
     lista = shuffle(cartas)
     return lista
 
-print('===========================================================')
+
