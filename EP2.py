@@ -1,5 +1,5 @@
 # Jogo de paciência acordeão
-print('Jogo de paci~encia acordeão')
+print('Jogo de paciência acordeão')
 
 print('===========================================================')
 
