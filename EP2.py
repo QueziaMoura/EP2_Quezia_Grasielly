@@ -3,7 +3,6 @@ print('Jogo de paciência acordeão')
 
 print('===========================================================')
 
-print('Criando o baralho')
 
 from random import shuffle
 
