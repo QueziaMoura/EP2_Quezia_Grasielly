@@ -1,8 +1,4 @@
-# Jogo de paciência acordeão
-print('Jogo de paciência acordeão')
-
-print('===========================================================')
-
+# Biblioteca
 
 from random import shuffle
 
@@ -23,7 +19,20 @@ def extrai_naipe(carta):
     else:
         return carta[1]
 
+# Teste
+
 print(cria_baralho())
+
+print(extrai_valor('J♣'))
+print(extrai_valor('10♠'))
+
 print(extrai_naipe('J♣'))
 print(extrai_naipe('10♠'))
+
+# Código - Jogo de paciência Arcodeão
+
+print('Jogo de paciência Acordeão')
+
+print('===========================================================')
+
 
