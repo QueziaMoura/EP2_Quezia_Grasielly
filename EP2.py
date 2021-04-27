@@ -18,6 +18,7 @@ def extrai_naipe(carta):
         return carta[1]
 
 
+
 print(cria_baralho())
 print(extrai_naipe('J♣'))
 print(extrai_naipe('10♠'))
