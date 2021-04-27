@@ -19,6 +19,57 @@ def extrai_naipe(carta):
     else:
         return carta[1]
 
+def lista_movimentos_possiveis(baralho,i):
+    resultado = []
+    if 'A' in baralho[i]:
+        numero = 'A'
+    if '1' in baralho[i]:
+        numero = '1'
+    if '2' in baralho[i]:
+        numero = '2'
+    if '3' in baralho[i]:
+        numero = '3'
+    if '4' in baralho[i]:
+        numero = '4'
+    if '5' in baralho[i]:
+        numero = '5'
+    if '6' in baralho[i]:
+        numero = '6'
+    if '7' in baralho[i]:
+        numero = '7'
+    if '8' in baralho[i]:
+        numero = '8'
+    if '9' in baralho[i]:
+        numero = '9'
+    if '10' in baralho[i]:
+        numero = '10'
+    if 'J' in baralho[i]:
+        numero = 'J'  
+    if 'Q' in baralho[i]:
+        numero = 'Q'
+    if 'K' in baralho[i]:
+        numero = 'K'
+
+    if '♣' in baralho[i]: 
+        naipe = '♣'
+    if '♠' in baralho[i]:
+        naipe =  '♠'
+    if '♥' in baralho[i]:
+        naipe = '♥'
+    if '♦' in baralho[i]:
+        naipe = '♦'
+  
+    if i == 0 :
+        return []
+    if numero in baralho[i-1] or naipe in baralho[i-1]:
+        resultado.append(1)
+    if i-3 >= 0:
+        if numero in baralho[i-3] or naipe in baralho[i-3]:
+            resultado.append(3) 
+
+    return resultado
+    
+
 # Teste
 
 print(cria_baralho())
