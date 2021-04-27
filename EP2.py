@@ -11,13 +11,17 @@ def cria_baralho():
     lista = shuffle(cartas)
     return cartas
 
+def extrai_valor(carta):
+    if carta == '10♣' or carta == '10♥' or carta == '10♠' or carta == '10♦':
+        return '10'
+    else:
+        return carta[0]
+
 def extrai_naipe(carta):
     if carta == '10♣' or carta == '10♥' or carta == '10♠' or carta == '10♦':
         return carta[2]
     else:
         return carta[1]
-
-
 
 print(cria_baralho())
 print(extrai_naipe('J♣'))
