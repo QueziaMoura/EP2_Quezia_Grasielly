@@ -74,6 +74,17 @@ def empilha(baralho,origem,destino):
     del baralho[origem]
     return baralho
 
+def possui_movimentos_possiveis(baralho):
+    
+  for i in range(1,len(baralho)):
+    if extrai_valor(baralho[i]) == extrai_valor(baralho[i-1]) or (extrai_naipe(baralho[i]) == extrai_naipe(baralho[i-1])):
+      return True
+    elif (extrai_valor(baralho[i]) == extrai_valor(baralho[i-3])) or (extrai_naipe(baralho[i]) == extrai_naipe(baralho[i-3])):
+      return True
+    else:
+      return False
+
+
 # Teste
 
 print(cria_baralho())
