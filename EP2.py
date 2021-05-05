@@ -101,4 +101,7 @@ print('Jogo de paciência Acordeão')
 
 print('=====================================================================')
 
+print('Seu baralho é:')
+print(cria_baralho())
+p = int(input('Digite a posição da carta que você deseja mover: '))
 
