@@ -82,21 +82,19 @@ def possui_movimentos_possiveis(baralho):
     return False
 
 
-# Teste
-
-print(cria_baralho())
-
-print(extrai_valor('J♣'))
-print(extrai_valor('10♠'))
-
-print(extrai_naipe('J♣'))
-print(extrai_naipe('10♠'))
 
 # Código - Jogo de paciência Arcodeão
 
 print('Jogo de paciência Acordeão')
 
 print('=====================================================================')
+
+print('Seja bem-vindo(a) ao jogo de Paciência Acordeão!')
+
+print('O objetivo deste jogo é colocar todas as cartas em uma mesma pilha\n')
+
+print('Existem apenas dois movimentos possíveis: ')
+
 
 # Iniciando o jogo
 
