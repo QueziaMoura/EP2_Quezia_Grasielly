@@ -1,6 +1,23 @@
 # Biblioteca
 
 from random import shuffle
+import os
+
+os.system("")
+
+# Group of Different functions for different styles
+
+class style():
+    BLACK = '\033[30m'
+    RED = '\033[31m'
+    GREEN = '\033[32m'
+    YELLOW = '\033[33m'
+    BLUE = '\033[34m'
+    MAGENTA = '\033[35m'
+    CYAN = '\033[36m'
+    WHITE = '\033[37m'
+    UNDERLINE = '\033[4m'
+    RESET = '\033[0m'
 
 def cria_baralho():
     cartas = ['A♣','K♣','Q♣','J♣','10♣','9♣','8♣','7♣','6♣','5♣','4♣','3♣','2♣','A♠','K♠','Q♠','J♠','10♠','9♠','8♠','7♠','6♠','5♠','4♠','3♠','2♠','A♦','K♦','Q♦','J♦','10♦','9♦','8♦','7♦','6♦','5♦','4♦','3♦','2♦','A♥','K♥','Q♥','J♥','10♥','9♥','8♥','7♥','6♥','5♥','4♥','3♥','2♥']
@@ -101,7 +118,5 @@ print('Jogo de paciência Acordeão')
 
 print('=====================================================================')
 
-print('Seu baralho é:')
-print(cria_baralho())
-p = int(input('Digite a posição da carta que você deseja mover: '))
+
 
