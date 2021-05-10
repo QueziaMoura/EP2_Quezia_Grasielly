@@ -131,5 +131,13 @@ print('Jogo de paciência Acordeão')
 
 print('=====================================================================')
 
+# Iniciando o jogo
 
+
+baralho = cria_baralho()
+
+movimentos = [0]
+
+while not possui_movimentos_possiveis(baralho) :
+  baralho = cria_baralho()
 
