@@ -114,3 +114,16 @@ movimentos = [0]
 while not possui_movimentos_possiveis(baralho) :
   baralho = cria_baralho()
 
+input('Aperte [Enter] para iniciar o jogo... \n')
+
+while True:
+  print('O estado atual do baralho é:\n')
+
+  mostrar_baralho(baralho)
+  print('')
+
+  i = int(input("Escolha uma carta (digite um número entre 1 e {}): ".format(len(baralho))))
+  i = i - 1 #Para que o usuário acesse a lista a posição correspondente ao valor digitado (1 - 52)
+            #Já que o primeiro elemento da lista corresponde a zero e o digitado pelo usuário para acessá-lo é 1
+            
+#########################################################################
