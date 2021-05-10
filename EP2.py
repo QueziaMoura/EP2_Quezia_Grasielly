@@ -18,6 +18,11 @@ class style():
     WHITE = '\033[37m'
     UNDERLINE = '\033[4m'
     RESET = '\033[0m'
+    
+def cria_baralho():
+    cartas = ['A♣','K♣','Q♣','J♣','10♣','9♣','8♣','7♣','6♣','5♣','4♣','3♣','2♣','A♠','K♠','Q♠','J♠','10♠','9♠','8♠','7♠','6♠','5♠','4♠','3♠','2♠','A♦','K♦','Q♦','J♦','10♦','9♦','8♦','7♦','6♦','5♦','4♦','3♦','2♦','A♥','K♥','Q♥','J♥','10♥','9♥','8♥','7♥','6♥','5♥','4♥','3♥','2♥']
+    shuffle(cartas)
+    return cartas
 
 def mostrar_baralho(baralho):
   j = 1
@@ -32,10 +37,6 @@ def mostrar_baralho(baralho):
       print(style.WHITE + "{}.".format(j), style.MAGENTA + "{}".format(carta))
     j += 1
 
-def cria_baralho():
-    cartas = ['A♣','K♣','Q♣','J♣','10♣','9♣','8♣','7♣','6♣','5♣','4♣','3♣','2♣','A♠','K♠','Q♠','J♠','10♠','9♠','8♠','7♠','6♠','5♠','4♠','3♠','2♠','A♦','K♦','Q♦','J♦','10♦','9♦','8♦','7♦','6♦','5♦','4♦','3♦','2♦','A♥','K♥','Q♥','J♥','10♥','9♥','8♥','7♥','6♥','5♥','4♥','3♥','2♥']
-    shuffle(cartas)
-    return cartas
 
 def extrai_valor(carta):
     if carta == '10♣' or carta == '10♥' or carta == '10♠' or carta == '10♦':
