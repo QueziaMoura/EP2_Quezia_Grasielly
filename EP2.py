@@ -19,6 +19,19 @@ class style():
     UNDERLINE = '\033[4m'
     RESET = '\033[0m'
 
+def mostrar_baralho(baralho):
+  j = 1
+  for carta in baralho:
+    if "♣" in carta : 
+      print(style.WHITE + "{}.".format(j), style.BLUE + "{}".format(carta))
+    elif "♠" in carta:
+      print(style.WHITE + "{}.".format(j), style.GREEN + "{}".format(carta))
+    elif "♥" in carta:
+      print(style.WHITE + "{}.".format(j), style.RED + "{}".format(carta))
+    else :
+      print(style.WHITE + "{}.".format(j), style.MAGENTA + "{}".format(carta))
+    j += 1
+
 def cria_baralho():
     cartas = ['A♣','K♣','Q♣','J♣','10♣','9♣','8♣','7♣','6♣','5♣','4♣','3♣','2♣','A♠','K♠','Q♠','J♠','10♠','9♠','8♠','7♠','6♠','5♠','4♠','3♠','2♠','A♦','K♦','Q♦','J♦','10♦','9♦','8♦','7♦','6♦','5♦','4♦','3♦','2♦','A♥','K♥','Q♥','J♥','10♥','9♥','8♥','7♥','6♥','5♥','4♥','3♥','2♥']
     shuffle(cartas)
