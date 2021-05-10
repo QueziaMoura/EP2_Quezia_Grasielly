@@ -95,6 +95,14 @@ print('O objetivo deste jogo é colocar todas as cartas em uma mesma pilha\n')
 
 print('Existem apenas dois movimentos possíveis: ')
 
+print('1. Empilhar uma carta sobre a carta imediatamente anterior;')
+print('2. Empilhar uma carta sobre a terceira carta anterior.\n')
+
+print('Para que um movimento possa ser realizado basta que uma das duas condições abaixo seja atendida:\n')
+
+print('- As duas cartas possuem o mesmo valor ou \n- As duas cartas possuem o mesmo naipe.\n')
+
+
 
 # Iniciando o jogo
 
