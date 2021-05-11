@@ -158,14 +158,14 @@ while True:
     print("2. {}".format(baralho[i-3]))  
          
 
-      while True:
-          decisao = int(input("Digite um número de sua escolha (1 ou 2): "))
-          if decisao == 1:
-            baralho = empilha(baralho,i,i-1)
-            break
-          if decisao == 2:
-            baralho = empilha(baralho,i,i-3)
-            break
+    while True:
+        decisao = int(input("Digite um número de sua escolha (1 ou 2): "))
+        if decisao == 1:
+          baralho = empilha(baralho,i,i-1)
+          break
+        if decisao == 2:
+          baralho = empilha(baralho,i,i-3)
+          break
 
 
     if not possui_movimentos_possiveis(baralho):
