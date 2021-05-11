@@ -27,13 +27,13 @@ def mostrar_baralho(baralho):
   j = 1
   for carta in baralho:
     if "♣" in carta : 
-      print(style.WHITE + "{}.".format(j), style.BLUE + "{}".format(carta))
+      print(style.WHITE + "{}.".format(j), style.BLUE + "{}" .format(carta) + style.RESET)
     elif "♠" in carta:
-      print(style.WHITE + "{}.".format(j), style.GREEN + "{}".format(carta))
+      print(style.WHITE + "{}.".format(j), style.GREEN + "{}".format(carta)+ style.RESET)
     elif "♥" in carta:
-      print(style.WHITE + "{}.".format(j), style.RED + "{}".format(carta))
+      print(style.WHITE + "{}.".format(j), style.RED + "{}".format(carta) + style.RESET)
     else :
-      print(style.WHITE + "{}.".format(j), style.MAGENTA + "{}".format(carta))
+      print(style.WHITE + "{}.".format(j), style.MAGENTA + "{}".format(carta) + style.RESET)
     j += 1
 
 
@@ -64,13 +64,11 @@ def lista_movimentos_possiveis(baralho,i):
         if numero in baralho[i-3] or naipe in baralho[i-3]:
             resultado.append(3) 
     return resultado
-
-
-    
+ 
 def empilha(baralho,origem,destino):
-    baralho[destino] = baralho[origem]
-    del baralho[origem]
-    return baralho
+  baralho[destino] = baralho[origem]
+  del baralho[origem]
+  return baralho
 
 def possui_movimentos_possiveis(baralho):
     
@@ -80,7 +78,6 @@ def possui_movimentos_possiveis(baralho):
     if (extrai_valor(baralho[i]) == extrai_valor(baralho[i-3])) or (extrai_naipe(baralho[i]) == extrai_naipe(baralho[i-3])):
       return True
     return False
-
 
 
 # Código - Jogo de paciência Arcodeão
@@ -128,28 +125,28 @@ while True:
             
 #########################################################################
 
-while True:
+  while True:
     
-   if 1 < i < len(baralho):
-     movimentos = lista_movimentos_possiveis(baralho,i)
-     if len(movimentos) != 0:
-         break
-     if len(movimentos) == 0:
-         i = int(input("A carta {} não pode ser movida. Por favor, digite um número entre 1 e {}: ".format(baralho[i],len(baralho))))
-         i = i - 1
+    if 1 < i < len(baralho):
+      movimentos = lista_movimentos_possiveis(baralho,i)
+      if len(movimentos) != 0:
+        break
+      if len(movimentos) == 0:
+        i = int(input("A carta {} não pode ser movida. Por favor, digite um número entre 1 e {}: ".format(baralho[i],len(baralho))))
+        i = i - 1
         
-     if not (1 < i < len(baralho)):
+    if not (1 < i < len(baralho)):
       i = int(input("Posição inválida. Por favor, digite um número entre 1 e {}: ".format(len(baralho))))
       i = i - 1
-      
+       
 #########################################################################
   
-if len(movimentos) == 1 :
-    if movimentos[0] == 1 :
+  if len(movimentos) == 1 :
+    if movimentos[0] == 1 : 
       baralho = empilha(baralho,i,i-1)
     baralho = empilha(baralho,i,i-3)
 
-if len(movimentos) == 2:
+  if len(movimentos) == 2:
     print("Sobre qual carta você quer empilhar o {}".format(baralho[i]))
 
     print("1. {}".format(baralho[i-1]))
@@ -160,4 +157,8 @@ if len(movimentos) == 2:
       baralho = empilha(baralho,i,i-1)
     if decisao == 2:
       baralho = empilha(baralho,i,i-3)
+
+      
+
+
 
