@@ -131,13 +131,13 @@ while True:
     while True:
     
 
-        if 1 < i < len(baralho):
-            movimentos = lista_movimentos_possiveis(baralho,i)
-            if len(movimentos) != 0:
-                break
-            if len(movimentos) == 0 or i ==1:
-                i = int(input("A carta {} não pode ser movida. Por favor, digite um número entre 1 e {}: ".format(baralho[i],len(baralho))))
-                i = i - 1
+      if 1 < i < len(baralho):
+        movimentos = lista_movimentos_possiveis(baralho,i)
+        if len(movimentos) != 0:
+          break
+        if len(movimentos) == 0 or i ==1:
+          i = int(input("A carta {} não pode ser movida. Por favor, digite um número entre 1 e {}: ".format(baralho[i],len(baralho))))
+          i = i - 1
         
         if not (1 <= i < len(baralho)):
             i = int(input("Posição inválida. Por favor, digite um número entre 1 e {}: ".format(len(baralho))))
@@ -159,13 +159,13 @@ while True:
          
 
     while True:
-        decisao = int(input("Digite um número de sua escolha (1 ou 2): "))
-        if decisao == 1:
-          baralho = empilha(baralho,i,i-1)
-          break
-        if decisao == 2:
-          baralho = empilha(baralho,i,i-3)
-          break
+      decisao = int(input("Digite um número de sua escolha (1 ou 2): "))
+      if decisao == 1:
+        baralho = empilha(baralho,i,i-1)
+        break
+      if decisao == 2:
+        baralho = empilha(baralho,i,i-3)
+        break
 
 
     if not possui_movimentos_possiveis(baralho):
