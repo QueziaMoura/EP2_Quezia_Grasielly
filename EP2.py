@@ -82,22 +82,22 @@ def possui_movimentos_possiveis(baralho):
 
 # Código - Jogo de paciência Arcodeão
 
-print('Jogo de paciência Acordeão')
+print(style.RED + 'Jogo de paciência Acordeão' + style.RESET)
 
-print('=====================================================================')
+print(style.CYAN + '=====================================================================\n' + style.RESET)
 
-print('Seja bem-vindo(a) ao jogo de Paciência Acordeão!')
+print(style.YELLOW + 'Seja bem-vindo(a) ao jogo de Paciência Acordeão!'+ style.RESET)
 
-print('O objetivo deste jogo é colocar todas as cartas em uma mesma pilha\n')
+print(style.CYAN + 'O objetivo deste jogo é colocar todas as cartas em uma mesma pilha\n' + style.RESET)
 
-print('Existem apenas dois movimentos possíveis: ')
+print(style.CYAN + 'Existem apenas dois movimentos possíveis: ' + style.RESET)
 
-print('1. Empilhar uma carta sobre a carta imediatamente anterior;')
-print('2. Empilhar uma carta sobre a terceira carta anterior.\n')
+print(style.GREEN + '1. Empilhar uma carta sobre a carta imediatamente anterior;' + style.RESET)
+print(style.GREEN +'2. Empilhar uma carta sobre a terceira carta anterior.\n' + style.RESET)
 
-print('Para que um movimento possa ser realizado basta que uma das duas condições abaixo seja atendida:\n')
+print(style.CYAN + 'Para que um movimento possa ser realizado basta que uma das duas condições abaixo seja atendida:\n' + style.RESET)
 
-print('- As duas cartas possuem o mesmo valor ou \n- As duas cartas possuem o mesmo naipe.\n')
+print(style.UNDERLINE + style.GREEN + '- As duas cartas possuem o mesmo valor ou \n- As duas cartas possuem o mesmo naipe.\n' + style.RESET)
 
 
 
