@@ -93,8 +93,6 @@ def possui_movimentos_possiveis(baralho):
 # Código - Jogo de paciência Arcodeão
 
 while True:
-  
-  os.system('cls') # Limpando Tela
 
   print(style.RED + 'Jogo de paciência Acordeão' + style.RESET)
   print(style.CYAN + '=====================================================================\n' + style.RESET)
