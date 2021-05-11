@@ -1,3 +1,4 @@
+
 # Biblioteca
 
 from random import shuffle
@@ -131,11 +132,11 @@ while True:
       movimentos = lista_movimentos_possiveis(baralho,i)
       if len(movimentos) != 0:
         break
-      if len(movimentos) == 0:
+      if len(movimentos) == 0 or i ==1:
         i = int(input("A carta {} não pode ser movida. Por favor, digite um número entre 1 e {}: ".format(baralho[i],len(baralho))))
         i = i - 1
         
-    if not (1 < i < len(baralho)):
+    if not (1 <= i < len(baralho)):
       i = int(input("Posição inválida. Por favor, digite um número entre 1 e {}: ".format(len(baralho))))
       i = i - 1
        
@@ -144,14 +145,16 @@ while True:
   if len(movimentos) == 1 :
     if movimentos[0] == 1 : 
       baralho = empilha(baralho,i,i-1)
-    baralho = empilha(baralho,i,i-3)
-
+    if movimentos[0] == 3 :
+      baralho = empilha(baralho,i,i-3)
+      
   if len(movimentos) == 2:
     print(style.YELLOW + "Sobre qual carta você quer empilhar o {}?".format(baralho[i]) + style.RESET)
 
     print(style.GREEN + "1. {}".format(baralho[i-1]) + style.RESET)
     print(style.GREEN + "2. {}".format(baralho[i-3]) + style.RESET)
 
+  while True:  
     decisao = int(input("Digite um número de sua escolha (1 ou 2): "))
     if decisao == 1:
       baralho = empilha(baralho,i,i-1)
