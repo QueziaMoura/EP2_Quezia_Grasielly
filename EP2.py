@@ -154,3 +154,10 @@ if len(movimentos) == 2:
 
     print("1. {}".format(baralho[i-1]))
     print("2. {}".format(baralho[i-3]))
+
+    decisao = int(input("Digite um número de sua escolha (1 ou 2): "))
+    if decisao == 1:
+      baralho = empilha(baralho,i,i-1)
+    if decisao == 2:
+      baralho = empilha(baralho,i,i-3)
+
