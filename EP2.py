@@ -143,3 +143,14 @@ while True:
       i = i - 1
       
 #########################################################################
+  
+if len(movimentos) == 1 :
+    if movimentos[0] == 1 :
+      baralho = empilha(baralho,i,i-1)
+    baralho = empilha(baralho,i,i-3)
+
+if len(movimentos) == 2:
+    print("Sobre qual carta você quer empilhar o {}".format(baralho[i]))
+
+    print("1. {}".format(baralho[i-1]))
+    print("2. {}".format(baralho[i-3]))
