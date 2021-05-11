@@ -158,6 +158,13 @@ while True:
     if decisao == 2:
       baralho = empilha(baralho,i,i-3)
 
+  if not possui_movimentos_possiveis(baralho):
+    if len(baralho) == 1:
+      print("Parabens, você ganhou o jogo!!")
+      break
+    else:
+      print("Game Over")
+      break
       
 
 
