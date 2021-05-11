@@ -131,6 +131,7 @@ while True:
     while True:
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     if 1 < i < len(baralho):
       movimentos = lista_movimentos_possiveis(baralho,i)
       if len(movimentos) != 0:
@@ -155,6 +156,9 @@ while True:
     print(style.YELLOW + "Sobre qual carta você quer empilhar o {}?".format(baralho[i]) + style.RESET)
 =======
       if 1 < i < len(baralho):
+=======
+      if 1 <= i < len(baralho):
+>>>>>>> 0c8589cf3a1ad629470d0c78ded15df9af8a3416
         movimentos = lista_movimentos_possiveis(baralho,i)
         if len(movimentos) != 0:
           break
@@ -162,7 +166,7 @@ while True:
           i = int(input("A carta {} não pode ser movida. Por favor, digite um número entre 1 e {}: ".format(baralho[i],len(baralho))))
           i = i - 1
         
-      if not (1 < i < len(baralho)):
+      if not (1 <= i < len(baralho)):
         i = int(input("Posição inválida. Por favor, digite um número entre 1 e {}: ".format(len(baralho))))
         i = i - 1
        
@@ -181,6 +185,7 @@ while True:
       print(style.GREEN + "2. {}".format(baralho[i-3]) + style.RESET)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
   while True:  
     decisao = int(input("Digite um número de sua escolha (1 ou 2): "))
     if decisao == 1:
@@ -194,6 +199,16 @@ while True:
       if decisao == 2:
         baralho = empilha(baralho,i,i-3)
 >>>>>>> eb335051d4270740cb6ac53a5c1b5f2d1e65b050
+=======
+      while True:
+          decisao = int(input("Digite um número de sua escolha (1 ou 2): "))
+          if decisao == 1:
+            baralho = empilha(baralho,i,i-1)
+            break
+          if decisao == 2:
+            baralho = empilha(baralho,i,i-3)
+            break
+>>>>>>> 0c8589cf3a1ad629470d0c78ded15df9af8a3416
 
     if not possui_movimentos_possiveis(baralho):
       if len(baralho) == 1:
