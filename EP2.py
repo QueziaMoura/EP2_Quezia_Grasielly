@@ -19,6 +19,7 @@ class style():
     WHITE = '\033[37m'
     UNDERLINE = '\033[4m'
     RESET = '\033[0m'
+
 def cria_baralho():
     cartas = ['A♣','K♣','Q♣','J♣','10♣','9♣','8♣','7♣','6♣','5♣','4♣','3♣','2♣','A♠','K♠','Q♠','J♠','10♠','9♠','8♠','7♠','6♠','5♠','4♠','3♠','2♠','A♦','K♦','Q♦','J♦','10♦','9♦','8♦','7♦','6♦','5♦','4♦','3♦','2♦','A♥','K♥','Q♥','J♥','10♥','9♥','8♥','7♥','6♥','5♥','4♥','3♥','2♥']
     shuffle(cartas)
@@ -27,24 +28,24 @@ def cria_baralho():
 def mostrar_baralho(baralho):
   j = 1
   for carta in baralho:
-    if j >= 10:
-      if "♣️" in carta : 
-        print(style.WHITE + "{}.".format(j), style.BLUE + "{}" .format(carta) + style.RESET)
-      elif "♠️" in carta:
-        print(style.WHITE + "{}.".format(j), style.GREEN + "{}".format(carta)+ style.RESET)
-      elif "♥️" in carta:
-        print(style.WHITE + "{}.".format(j), style.RED + "{}".format(carta) + style.RESET)
-      else :
-        print(style.WHITE + "{}.".format(j), style.MAGENTA + "{}".format(carta) + style.RESET)
-    if j < 10:
-      if "♣️" in carta : 
-        print(style.WHITE + " {}.".format(j), style.BLUE + "{}" .format(carta) + style.RESET)
-      elif "♠️" in carta:
-        print(style.WHITE + " {}.".format(j), style.GREEN + "{}".format(carta)+ style.RESET)
-      elif "♥️" in carta:
+    if j < 10:  # Para alinhar que os dígitos de um algarismo sejam alinhados com o restante
+      if "♣" in carta : 
+        print(style.WHITE + " {}.".format(j), style.BLUE + "{}".format(carta) + style.RESET)
+      elif "♠" in carta:
+        print(style.WHITE + " {}.".format(j), style.GREEN + "{}".format(carta) + style.RESET)
+      elif "♥" in carta:
         print(style.WHITE + " {}.".format(j), style.RED + "{}".format(carta) + style.RESET)
       else :
         print(style.WHITE + " {}.".format(j), style.MAGENTA + "{}".format(carta) + style.RESET)
+    if j >= 10:
+      if "♣" in carta : 
+        print(style.WHITE + "{}.".format(j), style.BLUE + "{}".format(carta) + style.RESET)
+      elif "♠" in carta:
+        print(style.WHITE + "{}.".format(j), style.GREEN + "{}".format(carta) + style.RESET)
+      elif "♥" in carta:
+        print(style.WHITE + "{}.".format(j), style.RED + "{}".format(carta) + style.RESET)
+      else :
+        print(style.WHITE + "{}.".format(j), style.MAGENTA + "{}".format(carta) + style.RESET)
     j += 1
 
 
