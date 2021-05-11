@@ -93,7 +93,7 @@ print(style.CYAN + 'O objetivo deste jogo é colocar todas as cartas em uma mesm
 print(style.CYAN + 'Existem apenas dois movimentos possíveis: ' + style.RESET)
 
 print(style.GREEN + '1. Empilhar uma carta sobre a carta imediatamente anterior;' + style.RESET)
-print(style.GREEN +'2. Empilhar uma carta sobre a terceira carta anterior.\n' + style.RESET)
+print(style.GREEN + '2. Empilhar uma carta sobre a terceira carta anterior.\n' + style.RESET)
 
 print(style.CYAN + 'Para que um movimento possa ser realizado basta que uma das duas condições abaixo seja atendida:\n' + style.RESET)
 
