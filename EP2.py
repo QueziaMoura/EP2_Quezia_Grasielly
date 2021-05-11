@@ -160,10 +160,10 @@ while True:
 
   if not possui_movimentos_possiveis(baralho):
     if len(baralho) == 1:
-      print("Parabens, você ganhou o jogo!!")
+      print(style.GREEN + "Parabens, você ganhou o jogo!!" + style.RESET)
       break
     else:
-      print("Game Over")
+      print(style.RED + "Game Over" + style.RESET)
       break
       
 
