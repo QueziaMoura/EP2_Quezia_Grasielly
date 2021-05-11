@@ -147,10 +147,10 @@ while True:
     baralho = empilha(baralho,i,i-3)
 
   if len(movimentos) == 2:
-    print("Sobre qual carta você quer empilhar o {}".format(baralho[i]))
+    print(style.YELLOW + "Sobre qual carta você quer empilhar o {}".format(baralho[i]))
 
-    print("1. {}".format(baralho[i-1]))
-    print("2. {}".format(baralho[i-3]))
+    print(style.GREEN + "1. {}".format(baralho[i-1]))
+    print(style.GREEN + "2. {}".format(baralho[i-3]))
 
     decisao = int(input("Digite um número de sua escolha (1 ou 2): "))
     if decisao == 1:
