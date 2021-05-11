@@ -77,7 +77,7 @@ def possui_movimentos_possiveis(baralho):
       return True
     if (extrai_valor(baralho[i]) == extrai_valor(baralho[i-3])) or (extrai_naipe(baralho[i]) == extrai_naipe(baralho[i-3])):
       return True
-    return False
+  return False
 
 
 # Código - Jogo de paciência Arcodeão
