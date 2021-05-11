@@ -27,14 +27,24 @@ def cria_baralho():
 def mostrar_baralho(baralho):
   j = 1
   for carta in baralho:
-    if "♣" in carta : 
-      print(style.WHITE + "{}.".format(j), style.BLUE + "{}" .format(carta) + style.RESET)
-    elif "♠" in carta:
-      print(style.WHITE + "{}.".format(j), style.GREEN + "{}".format(carta)+ style.RESET)
-    elif "♥" in carta:
-      print(style.WHITE + "{}.".format(j), style.RED + "{}".format(carta) + style.RESET)
-    else :
-      print(style.WHITE + "{}.".format(j), style.MAGENTA + "{}".format(carta) + style.RESET)
+    if j >= 10:
+      if "♣️" in carta : 
+        print(style.WHITE + "{}.".format(j), style.BLUE + "{}" .format(carta) + style.RESET)
+      elif "♠️" in carta:
+        print(style.WHITE + "{}.".format(j), style.GREEN + "{}".format(carta)+ style.RESET)
+      elif "♥️" in carta:
+        print(style.WHITE + "{}.".format(j), style.RED + "{}".format(carta) + style.RESET)
+      else :
+        print(style.WHITE + "{}.".format(j), style.MAGENTA + "{}".format(carta) + style.RESET)
+    if j < 10:
+      if "♣️" in carta : 
+        print(style.WHITE + " {}.".format(j), style.BLUE + "{}" .format(carta) + style.RESET)
+      elif "♠️" in carta:
+        print(style.WHITE + " {}.".format(j), style.GREEN + "{}".format(carta)+ style.RESET)
+      elif "♥️" in carta:
+        print(style.WHITE + " {}.".format(j), style.RED + "{}".format(carta) + style.RESET)
+      else :
+        print(style.WHITE + " {}.".format(j), style.MAGENTA + "{}".format(carta) + style.RESET)
     j += 1
 
 
@@ -167,7 +177,10 @@ while True:
       else:
         print(style.RED + "GAME OVER" + style.RESET)
         break
-      
+  
+  print("################################# Seu Baralho Ficou Assim #################################")
+  mostrar_baralho(baralho)
+  input("Aperte Enter Para Jogar Novamente")      
 
 
 
