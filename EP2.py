@@ -94,6 +94,7 @@ def possui_movimentos_possiveis(baralho):
 # Código - Jogo de paciência Arcodeão
 
 while True:
+  os.system('cls') #Limpando Tela
 
   print(style.RED + 'Jogo de paciência Acordeão' + style.RESET)
   print(style.CYAN + '=====================================================================\n' + style.RESET)
@@ -171,13 +172,13 @@ while True:
 
     if not possui_movimentos_possiveis(baralho):
       if len(baralho) == 1:
-        print(style.GREEN + "PARABÉNS, VOCÊ GANHOU O JOGO!!" + style.RESET)
+        print(style.GREEN + "**************************** PARABÉNS, VOCÊ GANHOU O JOGO!! ****************************" + style.RESET)
         break
       else:
-        print(style.RED + "GAME OVER" + style.RESET)
+        print(style.RED + "..........................................GAME OVER........................................" + style.RESET)
         break
   
-  print("################################# Seu Baralho Ficou Assim #################################")
+  print(style.YELLOW + "################################# Seu Baralho Ficou Assim #################################" + style.RESET)
   mostrar_baralho(baralho)
   input("Aperte Enter Para Jogar Novamente")      
 
